@@ -10,8 +10,9 @@
 [Humphrey Shi](https://www.humphreyshi.com/home)
 
 [[arXiv]()], 
-[[Colab Demo]()], 
-[[HuggingFace Space]()], 
+[[Project Page]](https://ma-xu.github.io/LIVE/),
+[[Colab Demo](https://colab.research.google.com/drive/1s108WmqSVH9MILOjSAu29QyAEjExOWAP?usp=sharing)], 
+[[HuggingFace Space](https://huggingface.co/spaces/ma-xu/LIVE)], 
 Primary contact: [[Xu Ma](mailto:ma.xu1@northeastern.edu)]
 
 <br><br>
