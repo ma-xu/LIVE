@@ -87,6 +87,47 @@ def get_sdf(phi, method='skfmm', **kwargs):
             sd /= sd.max()
         return sd
 
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--debug', action='store_true', default=True)
+    parser.add_argument("--config", default="config/base.yaml", type=str)
+    parser.add_argument("--experiment", default="experiment_5x1", type=str)
+    parser.add_argument("--seed", type=int)
+    parser.add_argument("--target", type=str, default="figures/smile.png", help="target image path")
+    parser.add_argument('--log_dir', metavar='DIR', default="log")
+    parser.add_argument('--initial', type=str, default="random", choices=['random', 'circle'])
+    parser.add_argument('--signature', default="smile", nargs='+', type=str)
+    parser.add_argument('--seginit', nargs='+', type=str)
+    parser.add_argument("--num_segments", type=int, default=4)
+    # parser.add_argument("--num_paths", type=str, default="1,1,1")
+    # parser.add_argument("--num_iter", type=int, default=500)
+    # parser.add_argument('--free', action='store_true')
+    # Please ensure that image resolution is divisible by pool_size; otherwise the performance would drop a lot.
+    # parser.add_argument('--pool_size', type=int, default=40, help="the pooled image size for next path initialization")
+    # parser.add_argument('--save_loss', action='store_true')
+    # parser.add_argument('--save_init', action='store_true')
+    # parser.add_argument('--save_image', action='store_true')
+    # parser.add_argument('--save_video', action='store_true')
+    # parser.add_argument('--print_weight', action='store_true')
+    # parser.add_argument('--circle_init_radius',  type=float)
+    cfg = edict()
+    args = parser.parse_args()
+    cfg.debug = args.debug
+    cfg.config = args.config
+    cfg.experiment = args.experiment
+    cfg.seed = args.seed
+    cfg.target = args.target
+    cfg.log_dir = args.log_dir
+    cfg.initial = args.initial
+    cfg.signature = args.signature
+    # set cfg num_segments in command
+    cfg.num_segments = args.num_segments
+    if args.seginit is not None:
+        cfg.seginit = edict()
+        cfg.seginit.type = args.seginit[0]
+        if cfg.seginit.type == 'circle':
+            cfg.seginit.radius = float(args.seginit[1])
+    return cfg
 
 def ycrcb_conversion(im, format='[bs x 3 x 2D]', reverse=False):
     mat = torch.FloatTensor([
