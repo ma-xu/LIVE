@@ -346,7 +346,7 @@ class linear_decay_lrlambda_f(object):
 
 
 
-def main_colab(image_path="figures/smile.png", experiment="experiment_5x1" ):
+def main_func(image_path="figures/smile.png", experiment="experiment_5x1" ):
     cfg_arg = parse_args()
     cfg_arg.target = image_path
     cfg_arg.experiment = experiment
@@ -690,4 +690,4 @@ if __name__ == "__main__":
     # make config #
     ###############
 
-    main_colab()
+    main_func()
