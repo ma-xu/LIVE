@@ -15,6 +15,9 @@
 [[HuggingFace Space](https://huggingface.co/spaces/ma-xu/LIVE)], 
 Primary contact: [[Xu Ma](mailto:ma.xu1@northeastern.edu)]
 
+
+**NOTE**: This repo is a simpel backup. See [Picsart-AI-Research/LIVE](https://github.com/Picsart-AI-Research/LIVE-Layerwise-Image-Vectorization) for the official release.
+
 <br><br>
 <div align="center">
     <img src="images/teaser.png" width="90%">
