@@ -16,7 +16,7 @@
 Primary contact: [[Xu Ma](mailto:ma.xu1@northeastern.edu)]
 
 
-**NOTE**: This repo is a simple backup. See [Picsart-AI-Research/LIVE](https://github.com/Picsart-AI-Research/LIVE-Layerwise-Image-Vectorization) for the official release.
+# This repo is a simple backup. See [Picsart-AI-Research/LIVE](https://github.com/Picsart-AI-Research/LIVE-Layerwise-Image-Vectorization) for the official release.
 
 <br><br>
 <div align="center">
